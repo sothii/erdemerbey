@@ -3,7 +3,7 @@
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 
 type Testimonial = {
   quote: string;
@@ -25,17 +25,17 @@ const AnimatedTestimonials = ({
     return testimonials.map(() => Math.floor(Math.random() * 21) - 10);
   }, [testimonials]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setActive((prev) => (prev + 1) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
-  const isActive = (index: number) => {
+  const isActive = useCallback((index: number) => {
     return index === active;
-  };
+  }, [active]);
 
   useEffect(() => {
     if (autoplay) {

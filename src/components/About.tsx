@@ -23,7 +23,7 @@ const About = () => {
               <p>
                 Marmara Üniversitesi Hukuk Fakültesi lisans eğitimini 2008 yılında 
                 tamamlamıştır. 2010 yılında avukatlık staj eğitimini tamamlamış, 
-                Bursa Barosu'na kayıtlı olarak avukatlık mesleğine başlamıştır.
+                Bursa Barosu&apos;na kayıtlı olarak avukatlık mesleğine başlamıştır.
               </p>
               <p>
                 Bursa Barosu bünyesinde Çevre Hukuku, Hayvan Hakları Hukuku 
