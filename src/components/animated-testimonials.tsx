@@ -23,10 +23,6 @@ const AnimatedTestimonials = ({
 
   const rotationValues = useMemo(() => {
     return testimonials.map(() => Math.floor(Math.random() * 21) - 10);
-  }, []);
-
-  const testimonialsByIndex = useMemo(() => {
-    return new Map(testimonials.map((testimonial, index) => [index, testimonial]));
   }, [testimonials]);
 
   const handleNext = () => {
@@ -49,7 +45,7 @@ const AnimatedTestimonials = ({
 
       return () => clearInterval(timer);
     }
-  }, [handleNext]);
+  }, [autoplay, handleNext]);
 
   return (
     <div className="max-w-sm md:max-w-7xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">

@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaArrowUp } from "react-icons/fa";
 import Image from "next/image";
