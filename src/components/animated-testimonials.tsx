@@ -25,6 +25,10 @@ const AnimatedTestimonials = ({
     return testimonials.map(() => Math.floor(Math.random() * 21) - 10);
   }, []);
 
+  const testimonialsByIndex = useMemo(() => {
+    return new Map(testimonials.map((testimonial, index) => [index, testimonial]));
+  }, [testimonials]);
+
   const handleNext = () => {
     setActive((prev) => (prev + 1) % testimonials.length);
   };
@@ -39,10 +43,13 @@ const AnimatedTestimonials = ({
 
   useEffect(() => {
     if (autoplay) {
-      const interval = setInterval(handleNext, 5000);
-      return () => clearInterval(interval);
+      const timer = setInterval(() => {
+        handleNext();
+      }, 3000);
+
+      return () => clearInterval(timer);
     }
-  }, [autoplay]);
+  }, [handleNext]);
 
   return (
     <div className="max-w-sm md:max-w-7xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
