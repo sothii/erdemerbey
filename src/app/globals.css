@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  font-size: 16px; /* Tüm rem değerleri için bir taban değer */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,10 +13,28 @@
   }
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100%;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  text-size-adjust: 100%; /* Tarayıcı bazlı otomatik metin boyutlandırmayı önler */
+  -webkit-text-size-adjust: 100%;
+  overflow-wrap: break-word;
+}
+
+img, iframe, video {
+  max-width: 100%;
+  height: auto;
 }
 
 @font-face {
