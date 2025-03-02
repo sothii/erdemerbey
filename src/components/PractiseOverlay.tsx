@@ -27,6 +27,7 @@ const PractiseOverlay = () => {
           alt="City Lights"
           fill
           className="object-cover"
+          sizes="100vw"
           priority
         />
         <motion.div 

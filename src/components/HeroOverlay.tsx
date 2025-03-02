@@ -27,6 +27,7 @@ const HeroOverlay = () => {
           alt="Modern Buildings"
           fill
           className="object-cover"
+          sizes="100vw"
           priority
         />
         {/* Dinamik gradient */}

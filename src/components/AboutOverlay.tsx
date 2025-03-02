@@ -28,6 +28,7 @@ const AboutOverlay = () => {
           alt="Law Books"
           fill
           className="object-cover object-top"
+          sizes="100vw"
           priority
         />
         {/* Dinamik gradient - Çok daha geç başlayan geçiş */}

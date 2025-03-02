@@ -37,7 +37,7 @@ const Map = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="lg:col-span-3 bg-white p-8 rounded-lg shadow-lg h-[600px] flex flex-col justify-between"
+            className="lg:col-span-3 bg-white p-8 rounded-lg shadow-lg min-h-[600px] h-auto flex flex-col justify-between"
           >
             <div>
               <h3 className="text-2xl font-serif text-[#003A70] mb-6">
@@ -97,14 +97,14 @@ const Map = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="lg:col-span-5 h-[600px]"
+            className="lg:col-span-5 h-auto min-h-[600px]"
           >
             <iframe 
               width="100%" 
               height="100%"
-              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Avukat%20Erdem%20Erbey%20%C5%9Eenyurt,%20Konak,%20Lefko%C5%9Fe%20Cd.%20Origami%20Flat%20Ofis%20No:42%20Kat:6%20D:43,%2016110%20Ni%CC%87l%C3%BCfer/Bursa,%20T%C3%BCrkiye+(Erdem%20Erbey%20Hukuk%20Dan%C4%B1%C5%9Fmanl%C4%B1k)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              style={{ border: 0, minHeight: "600px", height: "100%" }}
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Konak,%20Lefko%C5%9Fe%20Cd.%20Origami%20Flat%20Ofis%20No:42%20Kat:6%20D:43,%2016110%20Ni%CC%87l%C3%BCfer/Bursa+(Erdem%20Erbey%20Hukuk%20Dan%C4%B1%C5%9Fmanl%C4%B1k)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               className="rounded-lg shadow-lg"
-              style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -117,7 +117,7 @@ const Map = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="lg:col-span-4 bg-white p-8 rounded-lg shadow-lg h-[600px] flex flex-col"
+            className="lg:col-span-4 bg-white p-8 rounded-lg shadow-lg min-h-[600px] h-auto flex flex-col"
           >
             <h3 className="text-2xl font-serif text-[#003A70] mb-6">
               Bize Ulaşın
